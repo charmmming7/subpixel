@@ -1,12 +1,6 @@
 // common
 *{margin:0;padding:0;}
-body{ font-family: 'NanumBarunGothic', 'Malgun Gothic', Arial, sans-serif;font-size: 12px;line-height: 1.5; text-align: center;}
-.blind{overflow: hidden;position: absolute;top: 0;left: 0;width: 1px;height: 1px;font-size: 0;line-height: 0;}
 .num{font-family: Arial,Tahomas;}
-.wrap{min-width:1240px;margin-top:50px;margin: 0 auto;padding-bottom: 80px;zoom: 1;}
-.tpl{width: 770px;margin: 0 auto !important;line-height: 1.5;font-size: 12px !important;}
-.module_bx{position: relative;width:100% !important;height:auto !important;margin: 20px 10px 0;font-size: 16px;letter-spacing: -.25px;text-align: left;zoom: 1;vertical-align: top;}
-
 // pc
 .dm47{
     .module_wrap{
@@ -47,8 +41,8 @@ body{ font-family: 'NanumBarunGothic', 'Malgun Gothic', Arial, sans-serif;font-s
             span{
                 background-color:#000;
                 &:first-child{
-                    position:absolute;display:block;content:'';top:50%;left:0;margin-top:1px;width:66px;height:1px;
-                    & + span{position:absolute;display:block;content:'';top:0;left:50%;width:1px;height:66px;margin-left:-1px;}
+                    position:absolute;display:block;content:'';top:50%;left:0;margin-top:1px;width:100%;height:1px;
+                    & + span{position:absolute;display:block;content:'';top:0;left:50%;width:1px;height:100%;margin-left:-1px;}
                 }	
             }
         }
@@ -77,18 +71,13 @@ body{ font-family: 'NanumBarunGothic', 'Malgun Gothic', Arial, sans-serif;font-s
                 top:29px;left:-50px;width:40px;height:40px;
                 span{
                     background-color:#000;
-                    &:first-child{
-                        width:40px;
-                        & + span{height:40px;}
-                    }	
                 }
             }
         }
     }
 }
 
-// mobile
-.mobile{
+@media all and (max-width:770px){
     .dm47{
         .module_wrap{
             overflow:hidden;
@@ -126,12 +115,12 @@ body{ font-family: 'NanumBarunGothic', 'Malgun Gothic', Arial, sans-serif;font-s
                 .percent{position:absolute;right:.3rem;bottom:.5rem;font-size:3rem;}
             }
             .plus{
-                display:block;position:absolute;left:-46px;top:50%;width:33px;height:33px;margin-top:-16px;
+                display:block;position:absolute;left:-46px;top:20px;width:33px;height:33px;
                 span{
                     position:absolute;background-color:#000;
                     &:first-child{
-                        top:16px;left:0;width:100%;height:1px;
-                        & + span{top:0;left:16px;width:1px;height:100%;}
+                        top:16px;left:0;
+                        & + span{top:0;left:16px;}
                     }
                 }
             }
@@ -159,7 +148,7 @@ body{ font-family: 'NanumBarunGothic', 'Malgun Gothic', Arial, sans-serif;font-s
                     .percent{bottom:.3rem;right:.3rem;font-size:2.3rem;}
                 }
                 .plus{
-                    left:-31px;width:21px;height:21px;margin-top:-12px;
+                    top:13px;left:-31px;width:21px;height:21px;
                     span{
                         &:first-child{
                             top:10px;
