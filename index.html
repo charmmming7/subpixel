@@ -5,12 +5,70 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>sub pixel rendeing</title>
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@latest/nanumbarungothicsubset.css">
-        <link rel="stylesheet" href="module_style.css">
     </head>
     <body>
         <div class="wrap">
           <div class="tpl">
             <div class="module_bx dm47">
+              <h1>기존 마크업</h1>
+              <div class="module_wrap">
+                <div class="benefit_area triple">
+                  <!-- [D] 1. 적립혜택(필수) -->
+                  <div class="benefit_bx">
+                    <span class="benefit">
+                      <span class="tit point_color">적립혜택</span>
+                      <span class="cont point_color">
+                        <span class="num_wrap" role="text">
+                          <span class="txt_max">최대</span>
+                          <span class="num max">10</span>
+                          <span class="percent">%</span>
+                        </span>
+                      </span>
+                    </span>
+                  </div>
+                  <!-- // [D] 1. 적립혜택(필수) -->
+    
+                  <!-- [D] 2. 카드청구할인 - 구간형 -->
+                  <div class="benefit_bx">
+                    <span class="benefit">
+                      <span class="tit point_color">카드청구할인</span>
+                      <span class="cont point_color">
+                        <span class="num_wrap" role="text">
+                          <div class="plus point_color"><span></span><span></span></div>
+                          <span class="txt_max">최대</span>
+                          <span class="num min">5<span class="blind">% 부터</span>
+                          </span>
+                          <span class="num max">10</span>
+                          <span class="percent">%</span>
+                        </span>
+                      </span>
+                    </span>
+                  </div>
+                  <!-- // [D] 2. 카드청구할인 - 구간형 -->
+    
+                  <!-- [D] 4. 기타혜택 -->
+                  <div class="benefit_bx">
+                    <span class="benefit">
+                      <span class="tit point_color">혜택최대6자</span>
+                      <span class="cont point_color">
+                        <span class="num_wrap" role="text">
+                          <div class="plus point_color"><span></span><span></span></div>
+                          <span class="txt_max">최대</span>
+                          <span class="num max">7</span>
+                          <span class="percent">%</span>
+                        </span>
+                      </span>
+                    </span>
+                  </div>
+                  <!-- // [D] 4. 기타혜택 -->
+                </div>
+                <!-- // [D] 적립혜택 영역 -->
+              </div>
+            </div>
+
+            <!-- border-width 적용 -->
+            <div class="module_bx dm47 new">
+              <h1>border-width 적용</h1>
               <div class="module_wrap">
                 <div class="benefit_area triple">
                   <!-- [D] 1. 적립혜택(필수) -->
@@ -81,7 +139,8 @@
 
           var linkArr = {
             mobile:['common.cjos.mobile.min.css', 'common.cjmall.mobile.min.css'],
-            pc:['common.cjos.pc.min.css', 'common.cjmall.pc.min.css']
+            pc:['common.cjos.pc.min.css', 'common.cjmall.pc.min.css'],
+            module: 'module_style.css'
           };
 
           function appendLink(){
@@ -98,6 +157,11 @@
               link.href = target[i];
               document.getElementsByTagName('HEAD')[0].appendChild(link);
             }
+            var link = document.createElement('link');  
+            link.rel = 'stylesheet';  
+            link.type = 'text/css'; 
+            link.href = linkArr.module;
+            document.getElementsByTagName('HEAD')[0].appendChild(link);
           }
           appendLink();
       </script>
